@@ -16,7 +16,8 @@ for d in iter_data:
 
 df = pd.DataFrame(data)
 
-print(df.head())
+df = df.reset_index().to_json(orient='index')
+print(df)
 
 
 
