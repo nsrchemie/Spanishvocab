@@ -18,5 +18,5 @@ def quiz_render(request):
 
 	df = pd.DataFrame(data)
 
-	df = df.reset_index().to_json(orient='index')
+	df = df.to_json(orient='index')
 	return render(request, 'questions/quiz_render.html', {'df':df})
