@@ -13,7 +13,7 @@ def quiz_render(request):
 	data = defaultdict(list)
 
 	for d in iter_data:
-		data[g_data[1]].append(d)
+		data[g_data[1].strip()].append(d)
 		data[g_data[2]].append(next(iter_data))
 
 	df = pd.DataFrame(data)
